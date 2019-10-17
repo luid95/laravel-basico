@@ -64,14 +64,24 @@ Route::get('/', function () {
 })->name('home');
 */
 
-portfolio = [
+/* $portfolio = [
     ['title' => 'Proyecto #1'],
     ['title' => 'Proyecto #2'],
     ['title' => 'Proyecto #3'],
     ['title' => 'Proyecto #4'],
-];
+]; */
+//Route :: view('/portfolio', 'portfolio', compact('portfolio'))->name('portfolio');
 
+//url como primer parametro
+//nombre del controlador como segundo parametro
+//para utilizarlo en el metodo invoke del controlador de protfolioController
+//tambien podemos hacer uso especificando que metodo queremos que se ejecute agregando un @ y el nombre del metodo que se desea ejecutar
+Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route :: view('/', 'home')->name('home');
 Route :: view('/about', 'about')->name('about');
 Route :: view('/contact', 'contact')->name('contact');
-Route :: view('/portfolio', 'portfolio', compact('portfolio'))->name('portfolio');
+
+
+//con el metodo route-resource 
+//Route::resource('projects', 'PortfolioController');
+ 

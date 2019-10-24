@@ -15,6 +15,9 @@ class MessagesController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'content' => 'required|min:3'
+        ],[
+            //modificar los mensaje del formulario contacto
+            'name.required' => __('I need your name')
         ]);
 
         return "Datos validados";

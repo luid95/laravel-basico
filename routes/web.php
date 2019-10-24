@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Cambiar al lenguaje que querramos tener nuestra pagina dinamicamente
+
+App::setlocale('es');
 /*
 Route::get('/', function () {
     //return view('welcome');
@@ -87,5 +91,3 @@ Route :: view('/contact', 'contact')->name('contact');
 // Crear nueva ruta para procesar los mensajes del controlador
 
 Route::post('contact', 'MessagesController@store');
-
-//capitulo 16 como traducir las app de laravel

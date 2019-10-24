@@ -81,7 +81,11 @@ Route :: view('/', 'home')->name('home');
 Route :: view('/about', 'about')->name('about');
 Route :: view('/contact', 'contact')->name('contact');
 
-
 //con el metodo route-resource 
 //Route::resource('projects', 'PortfolioController');
- 
+
+// Crear nueva ruta para procesar los mensajes del controlador
+
+Route::post('contact', 'MessagesController@store');
+
+//capitulo 16 como traducir las app de laravel
